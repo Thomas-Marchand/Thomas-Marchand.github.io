@@ -5,50 +5,198 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thomas Marchand - github.io</title>
     <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $('a').on('click', function(event){
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function(){ // 800 is the duration of the scroll animation in milliseconds
+                    window.location.hash = hash;
+                });
+            }
+        });
+    });
+    </script>
 </head>
 <body>
     <header>
         <h1>Thomas Marchand</h1>
     </header>
     <nav>
-        <a href="#about">À propos</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#languages">Langages</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#proglanguages">Programming Languages</a>
+        <a href="#skills">Skills</a>
+        <a href="#languages">Languages</a>
         <a href="#contact">Contact</a>
     </nav>
     <div class="container">
-        <section id="about" class="portfolio-item">
-            <h2>À propos de moi</h2>
-            <p>Etudiant en Licence Informatique</p>
+        <section id="about" class="section-item">
+            <h2>About</h2>
+            <p>Computer science student at Sorbonne Science University</p>
         </section>
-        <section id="portfolio" class="portfolio-item">
-            <h2>Portfolio</h2>
-            <div>
-                <img src="image1.jpg" alt="Projet 1">
-                <p>Projet 1</p>
+
+        <!-- Projects section -->
+        <section id="projects" class="section-item">
+            <h2>Projects</h2>
+            <div class="grid">
+                <div class="projects-item">
+                    <a href="project1.html">
+                        <img src="image1.jpg" alt="p1_img">
+                        <p>Project 1</p>
+                    </a>
+                </div>
+                <div class="projects-item">
+                    <a href="project2.html">
+                        <img src="image2.jpg" alt="p2_img">
+                        <p>Project 2</p>
+                    </a>
+                </div>
             </div>
-            <div>
-                <img src="image2.jpg" alt="Projet 2">
-                <p>Projet 2</p>
-            </div>
-            <!-- elt de portfolio -->
         </section>
-        <section id="languages" class="portfolio-item">
-            <h2>Langages</h2>
-            <div>
-                <p>Français</p>
+
+        <!-- Skills section -->
+        <section id="skills" class="section-item">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <a href="https://www.blender.org/" target="_blank">
+                    <div class="skill-item">
+                        <img src="skill_icons/blender_logo.png" alt="blender_img">
+                        <div>
+                            <p class="skill-title">Blender</p>
+                            <p class="skill-description">3D modeling software</p>
+                            <p class="skill-experience">Experience: 12 years</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://unity.com/" target="_blank">
+                    <div class="skill-item">
+                        <img src="skill_icons/unity_logo.png" alt="unity_img">
+                        <div>
+                            <p class="skill-title">Unity</p>
+                            <p class="skill-description">Game development platform</p>
+                            <p class="skill-experience">Experience: 3 years</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://stability.ai/stable-image" target="_blank">
+                    <div class="skill-item">
+                        <img src="skill_icons/stability_logo.png" alt="stability_img">
+                        <div>
+                            <p class="skill-title">Stable Diffusion</p>
+                            <p class="skill-description">Image generation</p>
+                            <p class="skill-experience">Experience: 1 year</p>
+                        </div>
+                    </div>
+                </a>
             </div>
-            <div>
-                <p>Anglais</p>
-            </div>
-            <div>
-                <p>Japonais</p>
         </section>
-        <section id="contact" class="portfolio-item">
+
+        <!-- Programming Languages section -->
+        <section id="proglanguages" class="section-item">
+                <h2>Programming Languages</h2>
+            <div class="prog-languages-grid">
+                <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank">
+                    <div class="prog-item">
+                        <img src="prog_icons/C_logo.png" alt="c_img">
+                        <div class="info-box">C</div>
+                    </div>
+                </a>
+                <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank">
+                    <div class="prog-item">
+                        <img src="prog_icons/python_logo.png" alt="python_img">
+                        <div class="info-box">Python</div>
+                    </div>
+                </a>
+                <a href="https://en.wikipedia.org/wiki/Java_(programming_language)" target="_blank">
+                    <div class="prog-item">
+                        <img src="prog_icons/java_logo.png" alt="java_img">
+                        <div class="info-box">Java</div>
+                    </div>
+                </a>
+                <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" target="_blank">
+                    <div class="prog-item">
+                        <img src="prog_icons/Csharp_logo.png" alt="csharp_img">
+                        <div class="info-box">CSharp</div>
+                    </div>
+                </a>
+                <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">
+                    <div class="prog-item">
+                        <img src="prog_icons/html5_logo.png" alt="html_img">
+                        <div class="info-box">HTML</div>
+                    </div>
+                </a>
+                <a href="https://en.wikipedia.org/wiki/CSS" target="_blank">
+                    <div class="prog-item">
+                        <img src="prog_icons/css_logo.png" alt="css_img">
+                        <div class="info-box">CSS</div>
+                    </div>
+                </a>
+                <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">
+                    <div class="prog-item">
+                        <img src="prog_icons/javascript_logo.png" alt="js_img">
+                        <div class="info-box">JavaScript</div>
+                    </div>
+                </a>
+                <a href="https://en.wikipedia.org/wiki/React_(web_framework)" target="_blank">
+                    <div class="prog-item">
+                        <img src="prog_icons/react_logo.png" alt="react_img">
+                        <div class="info-box">React</div>
+                    </div>
+                </a>
+                <a href="https://en.wikipedia.org/wiki/PHP" target="_blank">
+                    <div class="prog-item">
+                        <img src="prog_icons/php_logo.png" alt="php_img">
+                        <div class="info-box">PHP</div>
+                    </div>
+                </a>
+                <a href="https://en.wikipedia.org/wiki/OCaml" target="_blank">
+                    <div class="prog-item">
+                        <img src="prog_icons/OCaml_logo.png" alt="ocaml_img">
+                        <div class="info-box">OCaml</div>
+                    </div>
+                </a>
+                <a href="https://en.wikipedia.org/wiki/MIPS_architecture" target="_blank">
+                    <div class="prog-item">
+                        <img src="prog_icons/MIPS_logo.png" alt="mips_img">
+                        <div class="info-box">MIPS</div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Languages section -->
+        <section id="languages" class="section-item">
+            <h2>Languages</h2>
+            <div class="lang-grid"> 
+                <div>
+                    <img src="lang_icons/fr.webp" alt="fr_img">
+                    <p>French</p>
+                </div>
+                <div>
+                    <img src="lang_icons/gb.webp" alt="en_img">
+                    <p>English</p>
+                </div>
+                <div>
+                    <img src="lang_icons/jp.webp" alt="jp_img">
+                    <p>Japanese</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact section -->
+        <section id="contact" class="section-item">
             <h2>Contact</h2>
-            <p>Adresse e-mail : thomasmas768@gmail.com</p>
-            <p>Numéro de téléphone : +33 7 66 57 48 94</p>
+            <p>✉️: thomasmas768@gmail.com</p>
+            <p>📞 : +33 7 66 57 48 94</p>
         </section>
     </div>
+    <footer>
+        <p>© 2024 Thomas Marchand</p>
+    </footer>
 </body>
 </html>

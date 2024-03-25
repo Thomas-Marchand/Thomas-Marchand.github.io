@@ -1,42 +1,165 @@
-body {
+/* html {
+    scroll-behavior: smooth;
+} */
+body { /* Body styles */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #111;
+    color: #fff;
+
+    /* noise */
+    background: 
+    linear-gradient(326deg, rgba(27,3,41,1), rgba(26,55,76,1)),
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    width: 100%;
 }
-header {
-    background-color: #333;
+header { /* Header styles */
+    background-color: #111;
     color: #fff;
     padding: 20px;
     text-align: center;
 }
-nav {
+a { /* Link styles */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+}
+nav { /* Navigation styles */
+    display: flex;
+    justify-content: space-around;
     background-color: #444;
     color: #fff;
     padding: 10px;
     text-align: center;
 }
-nav a {
+nav a { /* Navigation link styles */
+    position: relative;
     color: #fff;
     text-decoration: none;
     margin: 0 10px;
 }
-nav a:hover {
-    text-decoration: underline;
+nav a::before { /* Navigation link underline */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: #fff;
+    width: 0;
+    transition: width 0.3s ease-in-out;
 }
-.container {
+nav a:hover::before { /* Navigation link hover styles */
+    width: 100%;
+}
+.container {  /* Container styles */
     max-width: 960px;
     margin: 20px auto;
     padding: 0 20px;
 }
-.portfolio-item {
-    background-color: #fff;
+.section-item { /* Portfolio item styles */
+    background-color: #222;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 5px;
 }
-.portfolio-item img {
+.section-item img { /* Portfolio item image styles */
     max-width: 100%;
     height: auto;
     border-radius: 5px;
+}
+.info-box { /* Info-box styles */
+    display: none; /* Hide by default */
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0); /* Center horizontally */
+    background-color: #444;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+.prog-languages-grid { /* Grid for programming languages */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* 2 columns each 200px wide min */
+    /* gap: 50px; */
+    align-items: center;
+}
+#proglanguages img { /* Image styles */
+    max-width: 64px;
+}
+.prog-item { /* Programming item styles */
+    display: flex;
+    justify-content: center; /* center items horizontally */
+    align-items: center; /* center items vertically */
+    position: relative; /* position the info-box relative to this element */
+    padding: 10px;
+}
+.prog-item:hover { /* Hover styles */
+    cursor: pointer;
+}
+/* .prog-item:hover {
+    border: 1px solid;
+    border-image: linear-gradient(to right, #2aa, #a2a) 1;
+    border-radius: 5px;
+    cursor: pointer;
+} */
+.prog-item:hover .info-box { /* Show info-box when hovering the item */
+    display: block;
+}
+.prog-item p { /* Text styles */
+    margin-left: 10px;
+}
+
+
+#skills img { /* Image styles */
+    max-width: 10%;
+}
+.skill-item { /* Skill item styles */
+    display: flex;
+    align-items: center;
+}
+.skill-item p { /* Text styles */
+    margin-left: 10px;
+}
+.skill-item img { /* Image styles */
+    margin-right: 10px;
+}
+.skill-title { /* Skill title styles */
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+.skill-description { /* Skill description styles */
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.lang-grid { /* Grid for languages */
+    display: flex;
+    flex-direction: row; /* Align horizontally */
+    align-items: center; /* Align vertically */
+}
+
+.lang-grid div { /* Language item styles */
+    display: flex;
+    align-items: center; /* Align vertically for each child */
+}
+
+.lang-grid img { /* Image styles */
+    width: 30%;
+    margin-right: 10px; /* Space between image and text */
+}
+
+/* footer only when at the bottom */
+footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
 }
