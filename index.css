@@ -24,19 +24,29 @@ a { /* Link styles */
     text-decoration: none; /* Remove underline */
     color: inherit; /* Inherit color from parent */
 }
+#nav-wrapper {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
 nav { /* Navigation styles */
     display: flex;
     justify-content: space-around;
     background-color: rgba(22, 22, 22, 0.2);
+    -webkit-backdrop-filter: blur(10px); /* Add blur effect for Safari */
     backdrop-filter: blur(10px);
     color: rgba(255, 255, 255, 0.7);
     padding: 10px;
-    font-size: 1.2em;
+    font-size:calc(12px + 0.5vw);
     text-align: center;
     position: fixed; /* This is to ensure the nav bar stays at the top of the page */
     top: 0;
     width: 100%;
-    z-index: 100; 
     border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Add semi-transparent border */
 }
 nav a { /* Navigation link styles */
@@ -68,6 +78,7 @@ nav a:hover::before { /* Navigation link hover styles */
 }
 .section-item { /* Portfolio item styles */
     background-color: rgba(22, 22, 22, 0.8);
+    -webkit-backdrop-filter: blur(100px); /* Add blur effect for Safari */
     backdrop-filter: blur(100px);
     padding: 20px;
     margin-bottom: 20px;
@@ -187,7 +198,10 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #333;
+    /* gradient transparent to black */
+    background: linear-gradient(rgba(22, 22, 22, 0.5), rgba(22, 22, 22, 0.8));
+    -webkit-backdrop-filter: blur(10px); /* Add blur effect for Safari */
+    backdrop-filter: blur(10px);
     color: #fff;
     text-align: center;
     padding: 10px;
