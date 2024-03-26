@@ -31,11 +31,12 @@ nav { /* Navigation styles */
     color: #fff;
     padding: 10px;
     text-align: center;
+
+    width: 100%; /* This is to ensure the nav bar spans the entire width of the page */
+    z-index: 100; /* This is to ensure the nav bar stays on top of other elements */
 }
 nav a { /* Navigation link styles */
     position: relative;
-    color: #fff;
-    text-decoration: none;
     margin: 0 10px;
 }
 nav a::before { /* Navigation link underline */
@@ -60,7 +61,7 @@ nav a:hover::before { /* Navigation link hover styles */
     background-color: #222;
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 .section-item img { /* Portfolio item image styles */
     max-width: 100%;
@@ -117,10 +118,22 @@ nav a:hover::before { /* Navigation link hover styles */
 
 #skills img { /* Image styles */
     max-width: 10%;
+    /* align to the top*/
+    align-self: flex-start;
+    margin-top: 20px;
 }
 .skill-item { /* Skill item styles */
     display: flex;
     align-items: center;
+    /* adding a pretty border */
+    border: 1px solid #242424;
+    border-radius: 10px;
+    padding: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+.skill-item:hover { /* Hover styles */
+    border: 1px solid #333;
 }
 .skill-item p { /* Text styles */
     margin-left: 10px;
@@ -135,6 +148,12 @@ nav a:hover::before { /* Navigation link hover styles */
 .skill-description { /* Skill description styles */
     font-size: 1.2em;
     margin: 10px 0;
+}
+.skill-experience { /* Skill experience styles */
+    font-size: 1.1em;
+}
+.skill-personal { /* Personal skill styles */
+    font-size: 1em;
 }
 
 .lang-grid { /* Grid for languages */
