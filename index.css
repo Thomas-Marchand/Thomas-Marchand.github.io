@@ -43,6 +43,7 @@ nav { /* Navigation styles */
     -webkit-backdrop-filter: blur(10px); /* Add blur effect for Safari */
     backdrop-filter: blur(10px);
     color: rgba(255, 255, 255, 0.7);
+    /* variable padding */
     padding: 10px;
     font-size:calc(12px + 0.5vw);
     text-align: center;
@@ -50,6 +51,9 @@ nav { /* Navigation styles */
     top: 0;
     width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Add semi-transparent border */
+    overflow-x: auto; /* Ajoute un défilement horizontal uniquement si nécessaire */
+    white-space: nowrap; /* Empêche le retour à la ligne des éléments */
+    -webkit-overflow-scrolling: touch; /* Améliore la fluidité du défilement sur les appareils iOS */
 }
 nav a { /* Navigation link styles */
     position: relative;
