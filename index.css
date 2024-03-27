@@ -10,6 +10,7 @@ body { /* Body styles */
     color: #fff;
     
     /* noise */
+    /* increase contrast */
     background: 
     linear-gradient(326deg, rgba(27,3,41,1), rgba(26,55,76,1)),
     url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
@@ -22,16 +23,9 @@ body { /* Body styles */
 p {
     line-height: 1.2em;
 }
-header { /* Header styles */
-    background-color: #111;
-    color: #fff;
-    padding: 50px 0 20px;
-    text-align: center;
-}
-a { /* Link styles */
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit color from parent */
-}
+
+
+/* NAVIGATION */
 #nav-wrapper {
     position: fixed;
     width: 100%;
@@ -76,11 +70,25 @@ nav a::before { /* Navigation link underline */
 nav a:hover::before { /* Navigation link hover styles */
     width: 100%;
 }
+
+/* HEADER */
+header { /* Header styles */
+    background-color: #111;
+    color: #fff;
+    padding: 50px 0 20px;
+    text-align: center;
+}
+a { /* Link styles */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+}
 .spacer { /* a div for spacing between body and header */
     background-color: #222;
     height: 10px;
 
 }
+
+/* MAIN */
 .container {  /* Container styles */
     max-width: 1280px;
     margin: 20px auto;
@@ -88,7 +96,7 @@ nav a:hover::before { /* Navigation link hover styles */
 }
 .section-item { /* Portfolio item styles */
     background-color: rgba(22, 22, 22, 0.8);
-    padding: 20px 20px 40px 20px;
+    padding: 10px 20px 35px 20px; /* top right bottom left */
     margin-bottom: 20px;
     border-radius: 10px;
 }
@@ -103,15 +111,23 @@ nav a:hover::before { /* Navigation link hover styles */
     top: 100%;
     left: 50%;
     transform: translate(-50%, 0); /* Center horizontally */
-    background-color: #444;
+    background-color: rgba(22, 22, 22, 0.5);
+    -webkit-backdrop-filter: blur(3px); /* Add blur effect for Safari */
+    backdrop-filter: blur(3px);
+    color: white;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #333;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
 
+/* ABOUT */
+
+
+
+/* PROGRAMMING LANGUAGES */
 .prog-languages-grid { /* Grid for programming languages */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* 2 columns each 200px wide min */
@@ -131,12 +147,6 @@ nav a:hover::before { /* Navigation link hover styles */
 .prog-item:hover { /* Hover styles */
     cursor: pointer;
 }
-/* .prog-item:hover {
-    border: 1px solid;
-    border-image: linear-gradient(to right, #2aa, #a2a) 1;
-    border-radius: 5px;
-    cursor: pointer;
-} */
 .prog-item:hover .info-box { /* Show info-box when hovering the item */
     display: block;
 }
@@ -145,11 +155,17 @@ nav a:hover::before { /* Navigation link hover styles */
 }
 
 
+/* SKILLS */
 #skills img { /* Image styles */
-    max-width: 10%;
+    width: 128px;
     /* align to the top*/
     align-self: flex-start;
     margin-top: 20px;
+}
+@media (max-width: 600px) { /* Adjust the image size when the viewport width is 600px or less */
+    #skills img {
+        width: 64px;
+    }
 }
 .skill-item { /* Skill item styles */
     display: flex;
@@ -186,6 +202,7 @@ nav a:hover::before { /* Navigation link hover styles */
 }
 
 
+/* LANGUAGES */
 .lang-grid { /* Grid for languages */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 2 columns each 200px wide min */
@@ -196,13 +213,15 @@ nav a:hover::before { /* Navigation link hover styles */
     align-items: center; /* Align vertically for each child */
 }
 .lang-grid img { /* Image styles */
-    width: 30%;
+    width: 100px;
     margin-right: 10px; /* Space between image and text */
 }
 
+
+/* CONTACT */
 .contact-grid { /* Grid for contact information */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 2 columns each 200px wide min */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 .contact-item {
