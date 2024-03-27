@@ -81,7 +81,7 @@ nav a:hover::before { /* Navigation link hover styles */
 
 }
 .container {  /* Container styles */
-    max-width: 1280px;
+    max-width: 960px;
     margin: 20px auto;
     padding: 0, 20px;
 }
