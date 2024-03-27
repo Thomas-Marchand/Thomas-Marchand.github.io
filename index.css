@@ -16,6 +16,9 @@ body { /* Body styles */
     width: 100%;
     background-color: #111;
 }
+* {
+    box-sizing: border-box; /* Include padding and border in total width and height */
+}
 header { /* Header styles */
     background-color: #111;
     color: #fff;
@@ -51,13 +54,11 @@ nav { /* Navigation styles */
     top: 0;
     width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Add semi-transparent border */
-    overflow-x: auto; /* Ajoute un défilement horizontal uniquement si nécessaire */
-    white-space: nowrap; /* Empêche le retour à la ligne des éléments */
-    -webkit-overflow-scrolling: touch; /* Améliore la fluidité du défilement sur les appareils iOS */
 }
 nav a { /* Navigation link styles */
     position: relative;
     margin: 0 10px;
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
 }
 nav a::before { /* Navigation link underline */
     content: '';
@@ -84,8 +85,6 @@ nav a:hover::before { /* Navigation link hover styles */
 }
 .section-item { /* Portfolio item styles */
     background-color: rgba(22, 22, 22, 0.8);
-    -webkit-backdrop-filter: blur(100px); /* Add blur effect for Safari */
-    backdrop-filter: blur(100px);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
