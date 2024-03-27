@@ -96,7 +96,7 @@ a { /* Link styles */
 }
 .section-item { /* Portfolio item styles */
     background-color: rgba(22, 22, 22, 0.8);
-    padding: 10px 20px 35px 20px; /* top right bottom left */
+    padding: 20px 20px 35px 20px; /* top right bottom left */
     margin-bottom: 20px;
     border-radius: 10px;
 }
