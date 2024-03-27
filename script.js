@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     const skillItems = document.querySelectorAll('.skill-item');
-    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    let isTouchDevice = false;
+
+    window.addEventListener('touchstart', function onFirstTouch() {
+        isTouchDevice = true;
+        window.removeEventListener('touchstart', onFirstTouch, false);
+    }, false);
 
     skillItems.forEach(skillItem => {
         const skillPersonal = skillItem.querySelector('.skill-personal');
