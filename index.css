@@ -35,6 +35,7 @@ a { /* Link styles */
 #nav-wrapper {
     position: fixed;
     width: 100%;
+    bottom: 0;
     z-index: 100;
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
@@ -52,7 +53,7 @@ nav { /* Navigation styles */
     padding: 10px;
     font-size:calc(10px + 0.5vw);
     text-align: center;
-    position: sticky; /* This is to ensure the nav bar stays at the top of the page */
+    position: fixed; /* This is to ensure the nav bar stays at the top of the page */
     top: 0;
     width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Add semi-transparent border */
@@ -81,7 +82,7 @@ nav a:hover::before { /* Navigation link hover styles */
 
 }
 .container {  /* Container styles */
-    max-width: 960px;
+    max-width: 1280px;
     margin: 20px auto;
     padding: 0, 20px;
 }
@@ -186,9 +187,9 @@ nav a:hover::before { /* Navigation link hover styles */
 
 
 .lang-grid { /* Grid for languages */
-    display: flex;
-    flex-direction: row; /* Align horizontally */
-    align-items: center; /* Align vertically */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 2 columns each 200px wide min */
+    gap: 20px;
 }
 .lang-grid div { /* Language item styles */
     display: flex;
@@ -196,7 +197,6 @@ nav a:hover::before { /* Navigation link hover styles */
 }
 .lang-grid img { /* Image styles */
     width: 30%;
-    min-width: 70px;
     margin-right: 10px; /* Space between image and text */
 }
 
