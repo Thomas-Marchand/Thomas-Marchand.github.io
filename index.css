@@ -127,6 +127,60 @@ a { /* Link styles */
 
 
 
+/* SKILLS */
+#skills img {
+    width: 128px;
+    /* align to the top*/
+    align-self: flex-start;
+    margin-top: 20px;
+}
+@media (max-width: 600px) { /* Small window */
+    #skills img {
+        width: 64px;
+    }
+}
+.skill-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #242424;
+    border-radius: 10px;
+    padding: 10px;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+.skill-item:hover {
+    border: 1px solid #333;
+    cursor: pointer;
+}
+.skill-item p {
+    margin-left: 10px;
+}
+.skill-item img {
+    margin-right: 10px;
+}
+.skill-title {
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+.skill-description {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+.skill-experience {
+    font-size: 1.1em;
+}
+.skill-personal {
+    font-size: 1em;
+    opacity: 0.2;
+    max-height: 0;
+    overflow: hidden; /* Hide overflow */
+    transition: all 0.5s ease;
+}
+.skill-personal.show {
+    opacity: 1; /* Show */
+}
+
+
 /* PROGRAMMING LANGUAGES */
 .prog-languages-grid { /* Grid for programming languages */
     display: grid;
@@ -155,51 +209,6 @@ a { /* Link styles */
 }
 
 
-/* SKILLS */
-#skills img { /* Image styles */
-    width: 128px;
-    /* align to the top*/
-    align-self: flex-start;
-    margin-top: 20px;
-}
-@media (max-width: 600px) { /* Adjust the image size when the viewport width is 600px or less */
-    #skills img {
-        width: 64px;
-    }
-}
-.skill-item { /* Skill item styles */
-    display: flex;
-    align-items: center;
-    /* adding a pretty border */
-    border: 1px solid #242424;
-    border-radius: 10px;
-    padding: 10px;
-    padding-bottom: 20px;
-    margin-bottom: 10px;
-}
-.skill-item:hover { /* Hover styles */
-    border: 1px solid #333;
-}
-.skill-item p { /* Text styles */
-    margin-left: 10px;
-}
-.skill-item img { /* Image styles */
-    margin-right: 10px;
-}
-.skill-title { /* Skill title styles */
-    font-size: 1.5em;
-    margin: 20px 0;
-}
-.skill-description { /* Skill description styles */
-    font-size: 1.2em;
-    margin: 10px 0;
-}
-.skill-experience { /* Skill experience styles */
-    font-size: 1.1em;
-}
-.skill-personal { /* Personal skill styles */
-    font-size: 1em;
-}
 
 
 /* LANGUAGES */

@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="index.css">
     <!-- Roboto font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="main.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
     <div id="nav-wrapper">
@@ -36,36 +35,31 @@
         <section id="skills" class="section-item">
             <h2>Skills</h2>
             <div class="skills-list">
-                <a href="https://www.blender.org/" target="_blank">
-                    <div class="skill-item">
-                        <img src="skill_icons/blender_logo.png" alt="blender_img">
-                        <div>
-                            <p class="skill-title">Blender</p>
-                            <p class="skill-description">3D modeling software</p>
-                            <p class="skill-experience">Experience: 12 years</p>
-                            <p class="skill-personal">Have experience in hard-surface modeling, sculpting, texturing, UV mapping, baking, video editing,
-                                rigging, fluid and smoke simulation, particle simulation, physics simulation, animation, compositing.<br>
-                                Have participated in 30+ daily tournaments and a large community challenge.</p>
-                        </div>
+                <div class="skill-item">
+                    <img src="skill_icons/blender_logo.png" alt="blender_img">
+                    <div class="skill-content">
+                        <p class="skill-title">Blender</p>
+                        <p class="skill-description">3D modeling software</p>
+                        <p class="skill-experience">Experience: 12 years</p>
+                        <p class="skill-personal">Have experience in hard-surface modeling, sculpting, texturing, UV mapping, baking, video editing,
+                            rigging, fluid and smoke simulation, particle simulation, physics simulation, animation, compositing.<br>
+                            Have participated in 30+ daily tournaments and a large community challenge.</p>
                     </div>
-                </a>
-                <a href="https://unity.com/" target="_blank">
-                    <div class="skill-item">
-                        <img src="skill_icons/unity_logo.png" alt="unity_img">
-                        <div>
-                            <p class="skill-title">Unity</p>
-                            <p class="skill-description">Game development platform</p>
-                            <p class="skill-experience">Experience: 3 years</p>
-                            <p class="skill-personal">Made multiple games in Unity, including fps, power 4 with a multitude of strategies,
-                                and a 3d explorable exposition.</p>
-                            </p>
-                        </div>
+                </div>
+                <div class="skill-item">
+                    <img src="skill_icons/unity_logo.png" alt="unity_img">
+                    <div class="skill-content">
+                        <p class="skill-title">Unity</p>
+                        <p class="skill-description">Game development platform</p>
+                        <p class="skill-experience">Experience: 3 years</p>
+                        <p class="skill-personal">Made multiple games in Unity, including fps, power 4 with a multitude of strategies,
+                            and a 3d explorable exposition.</p>
+                        </p>
                     </div>
-                </a>
-                <a href="https://stability.ai" target="_blank">
+                </div>
                     <div class="skill-item">
                         <img src="skill_icons/stability_logo.png" alt="stability_img">
-                        <div>
+                        <div class="skill-content">
                             <p class="skill-title">Stable Diffusion</p>
                             <p class="skill-description">Image generation</p>
                             <p class="skill-experience">Experience: 2 years</p>
@@ -73,8 +67,7 @@
                                 created custom models and LoRAs.</p>
                             </div>
                         </div>
-                    </a>
-                </div>
+                    </div>
             </section>
             
             <!-- Projects section -->
