@@ -20,9 +20,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 skillPersonal.style.maxHeight = '0';
                 skillPersonal.classList.remove('show');
             });
+
+            skillItem.addEventListener('click', toggleSkillPersonal);
+        } else {
+            skillItem.addEventListener('touchend', toggleSkillPersonal);
         }
 
-        skillItem.addEventListener('click', function(event) {
+        function toggleSkillPersonal(event) {
             event.preventDefault();
             event.stopPropagation();
             if (skillPersonal.classList.contains('show')) {
@@ -32,6 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 skillPersonal.style.maxHeight = skillPersonal.scrollHeight + 'px';
                 skillPersonal.classList.add('show');
             }
-        });
+        }
     });
 });
