@@ -186,11 +186,17 @@ a { /* Link styles */
 
 
 /* PROJECTS */
-.project-grid { /* Grid for programming languages */
+.project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 10px;
-    align-items: stretch; /* Change this line */
+    align-items: stretch;
+}
+
+@media screen and (max-width: 600px) {
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
 }
 .project-item { /* Programming item styles */
     display: flex;
@@ -206,7 +212,7 @@ a { /* Link styles */
     border: 1px solid #333;
 }
 .project-item img {
-    width: 100vw;
+    width: 100%;
     filter: blur(5px);
     opacity: 0.5;
     transition: all 0.5s ease;
@@ -231,6 +237,7 @@ a { /* Link styles */
     position: relative;
 }
 .image-container .project-title {
+    text-align: center;
     font-size: 2em;
     font-weight: bold;
     position: absolute;
