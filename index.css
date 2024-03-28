@@ -324,9 +324,19 @@ a { /* Link styles */
 .contact-item img {
     width: 64px; /* Adjust the width of the image */
     margin-right: 10px; /* Space between image and text */
+    /* Making the text unselectable for easier copy-pasting */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }
 .contact-title {
     font-size: 1.2em; /* Adjust the font size */
+    /* Making the text unselectable for easier copy-pasting */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }
 .contact-info {
     font-size: 1em; /* Adjust the font size */
