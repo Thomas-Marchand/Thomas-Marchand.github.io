@@ -1,3 +1,7 @@
-<h1 align="center"> Portfolio </h1> 
+## Thomas Marchand
+  
 
-To view the portfolio, [click here](https://Thomas-Marchand.github.io).
+### Welcome 👋  
+### I'm a student at Sorbonne Science University
+
+### [Github IO page](https://Thomas-Marchand.github.io)
