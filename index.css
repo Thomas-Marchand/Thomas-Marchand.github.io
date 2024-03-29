@@ -120,6 +120,7 @@ a { /* Link styles */
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    white-space: nowrap; /* Add this line */
 }
 
 
