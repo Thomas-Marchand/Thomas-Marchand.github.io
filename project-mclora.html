@@ -3,11 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minecraf Lora - Thomas Marchand - github.io</title>
+    <title>Thomas Marchand - github.io</title>
+    <link rel="stylesheet" href="project-mclora.css">
+    <!-- Roboto font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
 </head>
 <body>
-    <a href="index.html">Return</a>
-    <h2>Project Minecraft Lora</h2>
-    <p>This page is under construction, please go back to the main page.</p>
+    <div id="nav-wrapper">
+        <nav id="nav">
+            <a href="index.html">Back to main page</a>
+        </nav>
+    </div>
+    <header id="header">
+        <h1>Minecraft LoRA</h1>
+    </header>
+    <!-- small spacing -->
+    <div class="spacer"></div>
+    <div class="container">
+        <section id="about" class="section-item">
+            <h2>Modifying a diffusion model to generate Minecraft-like images</h2>
+            <div class="image-container">                           
+                <img src="proj-img/mclora.gif" alt="Minecraft LoRA">
+            </div>
+            <div class="project-content">
+                <p class="project-main">I trained a LoRA with 156 screenshots from the game Minecraft, and used it to modify an AI model output.<br><br>
+                    Here are some examples of the provided images from minecraft and their label for the training:<br>
+                    <br>
+                    <div class="image-label-pair">
+                        <img src="project-mclora/cow.jpg" alt="Cow">
+                        <p>a cow in a forest, grass, oak trees</p>
+                    </div>
+                    <div class="image-label-pair">
+                        <img src="project-mclora/pig.jpg" alt="Pig">
+                        <p>a pig in a grass field, pumpkin and mountains in the background, blue sky</p>
+                    </div>
+                    <div class="image-label-pair">
+                        <img src="project-mclora/dolphin.jpg" alt="Dolphin">
+                        <p>underwater coral reef, yellow and purple corals, dolphin swimming</p>
+                    </div>
+                    <div class="image-label-pair">
+                        <img src="project-mclora/house.jpg" alt="House">
+                        <p>a house in a spruce village, path, torches, grass, blue sky with clouds</p>
+                    </div>
+                    <br><br>
+                    Here are the observations from training multiple times:
+                    <ul>
+                        <li><p class="list-main">Having a lot of images for the model to learn a variety of things about Minecraft.</p>
+                            This is especially true for the a LoRA like Minecraft which is far from the original model.<br>
+                            For example, if there's only one image with a pig and the image is labeled 'pig', it might learn that
+                            the whole image is a pig, including the grass, sky etc.. so having multiple images for the same thing is also important.</li>
+                        <li><p class="list-main">Having well-labeled images for the model to understand what it's looking at.</p>
+                            Since Minecraft things are very different from real life, this is crucial.</li>
+                        <li><p class="list-main">Labeling the images without specifying the fact that it's minecraft.</p>
+                            I have used a couple tools to generate labels for the images, but it would often specify that it's Minecraft.
+                            This doesn't work well for the model, as I wanted to get the minecraft style by simply activating the Minecraft LoRA, without
+                            having to specify that it's Minecraft. As such, I labeled the images as if they were real life, which worked well for the output.</li>
+                        <li><p class="list-main">Having a good base model with a lot of variety in the images it can generate.</p>
+                            This is important to have a good variety of Minecraft-like images.</li>
+                    </ul>
+                    This LoRA is the 5th version I trained, and it was trained on 512x512 images for 1h on my GPU.<br>
+                </p>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>© 2024 Thomas Marchand</p>
+        <p>Page coded/designed by me. Feel free to contact me for any questions or suggestions.</p>
+    </footer>
 </body>
 </html>

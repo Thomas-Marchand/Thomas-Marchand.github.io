@@ -293,6 +293,10 @@ a { /* Link styles */
 .prog-item p { /* Text styles */
     margin-left: 10px;
 }
+.link-text { /* Link text styles */
+    font-size: 1em;
+    color: #aaf;
+}
 
 
 

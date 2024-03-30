@@ -1,0 +1,150 @@
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+body { /* Body styles */
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    
+    /* noise */
+    /* increase contrast */
+    background: 
+    linear-gradient(326deg, rgba(27,3,41,1), rgba(26,55,76,1));
+    width: 100%;
+    background-color: #111;
+}
+* {
+    box-sizing: border-box; /* Include padding and border in total width and height */
+}
+p {
+    line-height: 1.2em;
+}
+
+
+/* NAVIGATION */
+#nav-wrapper {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 100;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+nav { /* Navigation styles */
+    display: flex;
+    background-color: rgba(22, 22, 22, 0.2);
+    -webkit-backdrop-filter: blur(10px); /* Add blur effect for Safari */
+    backdrop-filter: blur(10px);
+    color: rgba(255, 255, 255, 0.7);
+    /* variable padding */
+    padding: 10px;
+    font-size:calc(10px + 1em);
+    text-align: center;
+    position: fixed; /* This is to ensure the nav bar stays at the top of the page */
+    top: 0;
+    width: auto;
+    border-radius: 0 0 10px 0; /* bottom right is rounded */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+nav a { /* Navigation link styles */
+    position: relative;
+    margin: 0 10px;
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+}
+nav a::before { /* Navigation link underline */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 0;
+    transition: width 0.3s ease-in-out;
+}
+nav a:hover::before { /* Navigation link hover styles */
+    width: 100%;
+}
+
+/* HEADER */
+header { /* Header styles */
+    background-color: #111;
+    color: #fff;
+    padding: 50px 0 20px;
+    text-align: center;
+    font-size: 1.2em;
+}
+a { /* Link styles */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+}
+.spacer { /* a div for spacing between body and header */
+    background-color: #222;
+    height: 10px;
+
+}
+
+
+/* MAIN */
+.container {  /* Container styles */
+    max-width: 1280px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+.section-item { /* Portfolio item styles */
+    background-color: rgba(22, 22, 22, 0.8);
+    padding: 20px 20px 35px 20px; /* top right bottom left */
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.section-item img { /* Portfolio item image styles */
+    width: 80%;
+    /* center image */
+    display: block;
+    height: auto;
+    border-radius: 5px;
+    margin: 2em auto 2em auto;
+}
+
+.image-label-pair {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center; /* Align the image and text vertically */
+}
+
+.image-label-pair img {
+    width: 256px;
+    max-width: 50%; 
+    margin-right: 20px;
+}
+
+.image-label-pair p {
+    flex: 1; /* Take up remaining space */
+}
+
+li .list-main {
+    font-weight: bold;
+}
+li {
+    padding-bottom: 1em;
+}
+
+
+/* footer only when at the bottom */
+footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /* gradient transparent to black */
+    background: linear-gradient(rgba(22, 22, 22, 0.5), rgba(22, 22, 22, 0.8));
+    -webkit-backdrop-filter: blur(10px); /* Add blur effect for Safari */
+    backdrop-filter: blur(10px);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
