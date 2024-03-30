@@ -43,7 +43,7 @@ nav { /* Navigation styles */
     color: rgba(255, 255, 255, 0.7);
     /* variable padding */
     padding: 10px;
-    font-size:calc(10px + 1em);
+    font-size:calc(10px + 0.5em);
     text-align: center;
     position: fixed; /* This is to ensure the nav bar stays at the top of the page */
     top: 0;
@@ -108,8 +108,15 @@ a { /* Link styles */
     display: block;
     height: auto;
     border-radius: 5px;
-    margin: 2em auto 2em auto;
+    margin: 1em auto 1em auto;
 }
+/** width 100% for small screens */
+@media (max-width: 768px) {
+    .section-item img {
+        width: 100%;
+    }
+}
+
 
 .image-label-pair {
     display: flex;
