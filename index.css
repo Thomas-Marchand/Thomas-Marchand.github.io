@@ -55,7 +55,7 @@ nav { /* Navigation styles */
 nav a { /* Navigation link styles */
     position: relative;
     margin: 0 10px;
-    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    white-space: nowrap;
 }
 nav a::before { /* Navigation link underline */
     content: '';
@@ -86,16 +86,14 @@ nav a:hover::before { /* Navigation link hover styles */
     background-image: url('img/banner.jpg');
     background-size: cover;
     background-position: center;
-    filter: blur(0);
-    -webkit-filter: blur(); /* Safari */
     z-index: -1; /* Send the background image to the back */
     transition: all 0.5s ease;
 }
 #header:hover .background {
     filter: blur(5px);
     -webkit-filter: blur(5px);
-    /* zoom */
     transform: scale(1.01);
+    will-change: filter, transform;
 }
 
 .banner-container {
@@ -132,42 +130,6 @@ a { /* Link styles */
     height: 10px;
 
 }
-/* .banner-container {
-    position: relative;
-}
-
-.banner-container img {
-    opacity: 0.7;
-    object-fit: cover;
-    transition: all 0.2s ease-out;
-    max-width: 300%;
-}
-
-.banner-container h1 {
-    font-size: 3em;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-
-}
-@media (max-width: 600px) {
-    .banner-container h1 {
-        font-size: 2em;
-    }
-}
-.banner-container .banner-text {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-}
-.banner-container:hover img {
-    -webkit-filter: blur(5px);
-    filter: blur(5px);
-} */
 
 
 
@@ -445,4 +407,10 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px;
+}
+
+.footer-extra {
+    font-size: 0.8em;
+    opacity: 0.5;
+    margin-top: 10px;
 }
