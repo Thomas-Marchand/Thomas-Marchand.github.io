@@ -72,11 +72,57 @@ nav a:hover::before { /* Navigation link hover styles */
 }
 
 /* HEADER */
-header { /* Header styles */
-    background-color: #111;
-    color: #fff;
-    text-align: center;
+#header {
+    position: relative;
+    height: 400px;
 }
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(0);
+    -webkit-filter: blur(); /* Safari */
+    z-index: -1; /* Send the background image to the back */
+    transition: all 0.5s ease;
+}
+#header:hover .background {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    /* zoom */
+    transform: scale(1.01);
+}
+
+.banner-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1; /* Bring the text to the front */
+}
+
+.banner-container h1 {
+    font-size: 3em;
+}
+/* small text for mobile */
+@media (max-width: 600px) {
+    .banner-container h1 {
+        font-size: 2em;
+    }
+}
+
+.banner-container .banner-text {
+    font-size: 1em;
+    margin-top: 20px;
+}
+
 a { /* Link styles */
     text-decoration: none; /* Remove underline */
     color: inherit; /* Inherit color from parent */
@@ -86,7 +132,7 @@ a { /* Link styles */
     height: 10px;
 
 }
-.banner-container {
+/* .banner-container {
     position: relative;
 }
 
@@ -106,7 +152,6 @@ a { /* Link styles */
     color: #fff;
 
 }
-/* smaller text on mobile */
 @media (max-width: 600px) {
     .banner-container h1 {
         font-size: 2em;
@@ -120,9 +165,9 @@ a { /* Link styles */
     color: #fff;
 }
 .banner-container:hover img {
-    -webkit-filter: blur(5px); /* Add blur effect for Safari */
+    -webkit-filter: blur(5px);
     filter: blur(5px);
-}
+} */
 
 
 
