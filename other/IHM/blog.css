@@ -1,0 +1,164 @@
+/* Mode sombre */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* En-tête avec image + Titre */
+.header-overlay {
+    position: relative;
+    text-align: center;
+}
+
+.header-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.header-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Conteneur */
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+/* Espacement entre les sections */
+section {
+    margin-bottom: 50px;
+}
+
+/* Boutons */
+.btn {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #ffcc00;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #ffaa00;
+}
+
+/* Choix du Thème - Deux colonnes */
+.ideas-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.ideas-column {
+    width: 45%;
+}
+
+.ideas-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.ideas-column li {
+    background-color: #2a2a2a;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.ideas-column li:hover {
+    /* # dark yellow */
+    background-color: #aa8800;
+}
+
+
+/* Interviews */
+.interview-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.interview-card {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Personas */
+.persona-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.persona-card {
+    display: flex;
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+    align-items: center;
+    width: 30%;
+    min-width: 280px;
+}
+
+/* Ajustement pour écrans plus petits */
+@media screen and (max-width: 900px) {
+    .persona-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .persona-card {
+        width: 80%;
+    }
+}
+
+.persona-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.persona-info {
+    flex: 1;
+}
+
+.persona-info h3 {
+    margin-bottom: 5px;
+    color: #ffcc00;
+}
+
+.persona-info p {
+    margin: 2px 0;
+    font-size: 14px;
+}
