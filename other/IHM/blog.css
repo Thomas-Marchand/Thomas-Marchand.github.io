@@ -47,6 +47,15 @@ body {
 /* Espacement entre les sections */
 section {
     margin-bottom: 50px;
+    background-color: #161616;
+    padding: 20px;
+    transition: 0.2s ease-in-out;
+    border-radius: 10px;
+}
+
+section:hover {
+    background-color: #1a1a1a;
+    transform: scale(1.01);
 }
 
 /* Boutons */
@@ -63,6 +72,8 @@ section {
 
 .btn:hover {
     background-color: #ffaa00;
+    /* size up*/
+    transform: scale(1.1);
 }
 
 /* Choix du Thème - Deux colonnes */
@@ -87,11 +98,13 @@ section {
     padding: 8px;
     border-radius: 5px;
     color: #fff;
+    transition: 0.03s ease-in-out;
 }
 
 .ideas-column li:hover {
     /* # dark yellow */
     background-color: #aa8800;
+    transform: scale(1.01);
 }
 
 
