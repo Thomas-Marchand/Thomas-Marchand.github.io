@@ -1,7 +1,7 @@
 /* Mode sombre */
 body {
     font-family: Arial, sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     background-color: #121212;
     color: #ffffff;
     margin: 0;
@@ -9,7 +9,7 @@ body {
 }
 
 h2 {
-    font-size: 48px;
+    font-size: 40px;
 }
 
 /* En-tête avec image + Titre */
@@ -44,7 +44,7 @@ h2 {
 
 .subtitle {
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     margin-top: 10px;
 }
 
@@ -156,7 +156,8 @@ section:hover {
 }
 
 .problems-list li:hover {
-    background-color: #ff4d4d;
+    /* background-color: #ff4d4d; */
+    background-color: #aa3333;
     transform: scale(1.01);
 }
 
@@ -214,5 +215,5 @@ section:hover {
 
 .persona-info p {
     margin: 2px 0;
-    font-size: 18px;
+    font-size: 16px;
 }
