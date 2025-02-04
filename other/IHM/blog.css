@@ -78,13 +78,26 @@ section:hover {
     color: black;
     text-decoration: none;
     border-radius: 5px;
+    user-select: none;
     transition: 0.2s ease-in-out;
 }
 
 .btn:hover {
     background-color: #ffaa00;
-    /* size up*/
     transform: scale(1.1);
+}
+
+.btn-not {
+    display: inline-block;
+    margin: 5px;
+    padding: 20px;
+    background-color: #666666;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    pointer-events: none;
+    user-select: none;
+    transition: 0.2s ease-in-out;
 }
 
 /* Choix du Thème - Deux colonnes */
