@@ -305,7 +305,7 @@ section:hover {
 .postit:hover {
     z-index: 999;
     transform: scale(2) rotate(0deg);
-    box-shadow: 120px 120px 100px rgba(0, 0, 0, 0.5);
+    box-shadow: 120px 120px 100px rgba(0, 0, 0, 0.3);
 }
 
 /* Effet de rotation aléatoire */
