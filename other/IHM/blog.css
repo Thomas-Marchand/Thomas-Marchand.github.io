@@ -273,7 +273,7 @@ section:hover {
 /* SECTION POST-IT */
 .postit-section {
     text-align: center;
-    height: 2500px; /* very tall */
+    height: 2800px; /* very tall */
     background-image: url('corkboard.jpg');
     background-repeat: repeat;
 }
@@ -289,21 +289,23 @@ section:hover {
 
 .postit-container {
     position: relative;
-    height: 400px;
-    width: 80%;
+    height: 2600px;
+    width: 85%;
     margin: auto;
 }
 
 .postit {
     position: absolute;
-    scale: 0.35;
+    scale: 0.3;
     z-index: 0;
-    transition: transform 0.3s, z-index 0.1s;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
+    transition: transform 0.3s, z-index 0.1s, box-shadow 0.3s;
 }
 
 .postit:hover {
     z-index: 999;
     transform: scale(2) rotate(0deg);
+    box-shadow: 120px 120px 100px rgba(0, 0, 0, 0.5);
 }
 
 /* Effet de rotation aléatoire */
