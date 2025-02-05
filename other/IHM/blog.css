@@ -10,6 +10,7 @@ body {
 
 h2 {
     font-size: 40px;
+    text-align: center;
 }
 
 /* En-tête avec image + Titre */
@@ -166,6 +167,8 @@ section:hover {
 
 
 
+
+
 /* Interviews */
 .interview-container {
     display: flex;
@@ -265,3 +268,49 @@ section:hover {
     margin: 2px 0;
     font-size: 16px;
 }
+
+
+/* SECTION POST-IT */
+.postit-section {
+    text-align: center;
+    height: 2500px; /* very tall */
+    background-image: url('corkboard.jpg');
+    background-repeat: repeat;
+}
+
+.postit-section:hover {
+    transform: scale(1);
+}
+
+.postit-section h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.postit-container {
+    position: relative;
+    height: 400px;
+    width: 80%;
+    margin: auto;
+}
+
+.postit {
+    position: absolute;
+    scale: 0.35;
+    z-index: 0;
+    transition: transform 0.3s, z-index 0.1s;
+}
+
+.postit:hover {
+    z-index: 999;
+    transform: scale(2) rotate(0deg);
+}
+
+/* Effet de rotation aléatoire */
+.postit-1 { transform: rotate(15deg); top: 10px; left: 5%; }
+.postit-2 { transform: rotate(-10deg); top: 60px; left: 25%; }
+.postit-3 { transform: rotate(5deg); top: 20px; left: 50%; }
+.postit-4 { transform: rotate(-5deg); top: 80px; left: 75%; }
+.postit-5 { transform: rotate(-20deg); top: 150px; left: 10%; }
+.postit-6 { transform: rotate(10deg); top: 200px; left: 40%; }
+.postit-7 { transform: rotate(-15deg); top: 180px; left: 70%; }
