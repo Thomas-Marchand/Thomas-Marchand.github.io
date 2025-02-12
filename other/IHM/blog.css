@@ -316,3 +316,39 @@ section:hover {
 .postit-5 { transform: rotate(-20deg); top: 150px; left: 10%; }
 .postit-6 { transform: rotate(10deg); top: 200px; left: 40%; }
 .postit-7 { transform: rotate(-15deg); top: 180px; left: 70%; }
+
+
+
+/* SECTION DESIGN */
+.design-dimension-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.design-dimension-list li {
+    background-color: #2a2a2a;
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 5px;
+    color: #fff;
+    transition: 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 1.5;
+}
+
+.design-dimension-list li:hover {
+    background-color: #aa8800;
+    transform: scale(1.02);
+}
+
+/* Titres des sous-sections */
+section h3 {
+    color: #ffcc00;
+    margin-top: 20px;
+    font-size: 1.4em;
+    /* border-bottom: 2px solid #ffaa00; */
+    padding-bottom: 5px;
+}
