@@ -355,8 +355,8 @@ section h3 {
 
 
 /* Vidéos */
-.video-section p {
-    color: #555;
+.faint {
+    color:#555;
 }
 
 .video-gallery {
