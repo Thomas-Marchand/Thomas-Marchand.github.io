@@ -355,6 +355,10 @@ section h3 {
 
 
 /* Vidéos */
+.video-section p {
+    color: #555;
+}
+
 .video-gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Deux colonnes de largeur égale */
