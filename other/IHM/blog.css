@@ -391,7 +391,6 @@ section h3 {
     font-weight: bold;
 }
 
-/* center img  of prototype-section */
 .prototype-section img {
     display: block;
     margin: auto;
@@ -399,7 +398,6 @@ section h3 {
     border-radius: 10px;
 }
 
-/* Responsive : passe à une seule colonne sur les petits écrans */
 @media (max-width: 1000px) {
     .video-gallery {
         grid-template-columns: 1fr; /* 1 colonne sur mobile */
@@ -417,21 +415,19 @@ section h3 {
 
 .prototype-img {
     position: relative;
-    z-index: 1; /* Ensure the non-hover image stays visible */
-    max-width: 100%; /* Ensure responsiveness */
-    height: auto; /* Maintain aspect ratio */
+    z-index: 1;
+    max-width: 100%;
+    height: auto;
 }
 
 .prototype-img-hover {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Center the hover image */
-    max-width: 100%; /* Match the original image's width */
-    height: auto; /* Maintain aspect ratio */
+    transform: translate(-50%, -50%);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-    z-index: 2; /* Ensure the hover image appears on top */
+    z-index: 2;
 }
 
 .prototype-img-container:hover .prototype-img-hover {
