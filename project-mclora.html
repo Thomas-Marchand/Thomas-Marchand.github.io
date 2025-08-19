@@ -3,92 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thomas Marchand - github.io</title>
+    <title>Thomas Marchand - Minecraft LoRA Project</title>
     <link rel="stylesheet" href="project-mclora.css">
-    <!-- Roboto font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <!-- Inter font for better readability -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div id="nav-wrapper">
-        <nav id="nav">
-            <a href="index.html">Back to main page</a>
-        </nav>
-    </div>
-    <header id="header">
-        <h1>Minecraft LoRA</h1>
-    </header>
-    <!-- small spacing -->
-    <div class="spacer"></div>
-    <div class="container">
-        <section id="about" class="section-item">
-            <h2>Modifying a diffusion model to generate Minecraft-like images</h2>
-            <div class="image-container">                           
-                <img src="proj-img/mclora.gif" alt="Minecraft LoRA">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">TM</span>
             </div>
-            <div class="project-content">
-                <h3>I trained a LoRA with 156 screenshots from the game Minecraft, and used it to modify an AI model output.<br><br></h3>
-                <p>Here are some examples of the provided images from Minecraft and their label for the training.<br>
-                Note that these are screenshots from the game, and they are NOT the generated images:</p>
-                <br>
-                <div class="image-label-pair">
-                    <img src="project-mclora/cow.jpg" alt="Cow">
-                    <p>a cow in a forest, grass, oak trees</p>
+            <div class="nav-back">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Portfolio
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="project-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="project-badge">
+                        <span class="badge">AI/ML Project</span>
+                        <span class="badge">Computer Vision</span>
+                    </div>
+                    <h1 class="project-title">Minecraft LoRA</h1>
+                    <p class="project-subtitle">
+                        Modifying a diffusion model to generate Minecraft-like images using custom LoRA training
+                    </p>
+                    <div class="project-demo">
+                        <img src="proj-img/mclora.gif" alt="Minecraft LoRA Demo" class="demo-image">
+                    </div>
                 </div>
-                <div class="image-label-pair">
-                    <img src="project-mclora/pig.jpg" alt="Pig">
-                    <p>a pig in a grass field, pumpkin and mountains in the background, blue sky</p>
+            </div>
+        </section>
+
+        <!-- Project Overview -->
+        <section class="project-overview section">
+            <div class="container">
+                <div class="overview-content">
+                    <h2 class="section-title">Project Overview</h2>
+                    <p class="overview-text">
+                        I trained a custom LoRA (Low-Rank Adaptation) model using 156 carefully curated screenshots 
+                        from Minecraft to modify a stable diffusion model's output. This project demonstrates the 
+                        power of style transfer in AI image generation and the importance of dataset curation.
+                    </p>
+                    
+                    <div class="tech-stack">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Stable Diffusion</span>
+                            <span class="tech-tag">LoRA</span>
+                            <span class="tech-tag">Computer Vision</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="image-label-pair">
-                    <img src="project-mclora/dolphin.jpg" alt="Dolphin">
-                    <p>underwater coral reef, yellow and purple corals, dolphin swimming</p>
+            </div>
+        </section>
+
+        <!-- Training Dataset -->
+        <section class="dataset-section section">
+            <div class="container">
+                <h2 class="section-title">Training Dataset Examples</h2>
+                <p class="section-subtitle">
+                    Screenshots from Minecraft with carefully crafted labels for optimal training results
+                </p>
+                
+                <div class="dataset-grid">
+                    <div class="dataset-item">
+                        <div class="image-container">
+                            <img src="project-mclora/cow.jpg" alt="Minecraft Cow">
+                        </div>
+                        <div class="label-container">
+                            <h4>Training Label:</h4>
+                            <p>"a cow in a forest, grass, oak trees"</p>
+                        </div>
+                    </div>
+                    
+                    <div class="dataset-item">
+                        <div class="image-container">
+                            <img src="project-mclora/pig.jpg" alt="Minecraft Pig">
+                        </div>
+                        <div class="label-container">
+                            <h4>Training Label:</h4>
+                            <p>"a pig in a grass field, pumpkin and mountains in the background, blue sky"</p>
+                        </div>
+                    </div>
+                    
+                    <div class="dataset-item">
+                        <div class="image-container">
+                            <img src="project-mclora/dolphin.jpg" alt="Minecraft Dolphin">
+                        </div>
+                        <div class="label-container">
+                            <h4>Training Label:</h4>
+                            <p>"underwater coral reef, yellow and purple corals, dolphin swimming"</p>
+                        </div>
+                    </div>
+                    
+                    <div class="dataset-item">
+                        <div class="image-container">
+                            <img src="project-mclora/house.jpg" alt="Minecraft House">
+                        </div>
+                        <div class="label-container">
+                            <h4>Training Label:</h4>
+                            <p>"a house in a spruce village, path, torches, grass, blue sky with clouds, lake in the background"</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="image-label-pair">
-                    <img src="project-mclora/house.jpg" alt="House">
-                    <p>a house in a spruce village, path, torches, grass, blue sky with clouds, lake in the background</p>
-                </div>
-                <br><br>
-                <p>Here's a video showing how a cow morphs from realistic to minecraft-like with the LoRA between weights 0 to 1:</p>
+            </div>
+        </section>
+
+        <!-- Morphing Demo -->
+        <section class="demo-section section">
+            <div class="container">
+                <h2 class="section-title">Style Transfer Demonstration</h2>
+                <p class="section-subtitle">
+                    Watch how a realistic cow transforms into Minecraft style as the LoRA weight increases from 0 to 1
+                </p>
+                
                 <div class="video-container">
-                    <video autoplay loop muted class="videoInsert">
+                    <video autoplay loop muted class="demo-video">
                         <source src="project-mclora/cow-morph.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <h3>Here are the observations from training multiple times:<br><br></h3>
-                <ul>
-                    <li><p class="list-main">Having a lot of images for the model to learn a variety of things about Minecraft.</p>
-                        This is especially true for the a LoRA like Minecraft which is far from the original model.<br>
-                        For example, if there's only one image with a pig and the image is labeled 'pig', it might learn that
-                        the whole image is a pig, including the grass, sky etc.. so having multiple images for the same thing is also important.</li>
-                    <li><p class="list-main">Having well-labeled images for the model to understand what it's looking at.</p>
-                        Since Minecraft things are very different from real life, this is crucial.</li>
-                    <li><p class="list-main">Labeling the images without specifying the fact that it's minecraft.</p>
-                        I have used a couple tools to generate labels for the images, but it would often specify that it's Minecraft.
-                        This doesn't work well for the model, as I wanted to get the minecraft style by simply activating the Minecraft LoRA, without
-                        having to specify that it's Minecraft. As such, I labeled the images as if they were real life, which worked well for the output.</li>
-                    <li><p class="list-main">Having a good base model with a lot of variety in the images it can generate.</p>
-                        This is important to have a good variety of Minecraft-like images.</li>
-                    <li><p class="list-main">Training for the right amount of time.</p>
-                        Training for too long can lead to broken images, and the same happens if the model is not trained enough. Saving multiple checkpoints is important.</li>    
-                </ul>
-                Now, this LoRA is far from perfect. If you generate a lot of images, you will start to see similar patterns emerge, and sometimes broken images.
-                This is not too surprising since 156 images is not a lot for a whole game. A large model is usually trained on millions of images.<br>
-                The way I could improve this model is by training it on more images, and testing more parameters and epochs. Sometimes less training time gets better results.<br><br>
-                This LoRA is the 5th version I trained, and it was trained on 512x512 images for 1h on my GPU.<br>
             </div>
         </section>
-    </div>
-    <footer>
-        <p>© 2025 Thomas Marchand</p>
-        <p>Page coded/designed by me. Feel free to contact me for any questions or suggestions.</p>
+
+        <!-- Key Learnings -->
+        <section class="learnings-section section">
+            <div class="container">
+                <h2 class="section-title">Key Learnings & Observations</h2>
+                <p class="section-subtitle">
+                    Insights gained from multiple training iterations and experimentation
+                </p>
+                
+                <div class="learnings-grid">
+                    <div class="learning-card">
+                        <div class="learning-icon">
+                            <i class="fas fa-images"></i>
+                        </div>
+                        <h3>Dataset Diversity</h3>
+                        <p>
+                            Having a large variety of images is crucial for the model to learn different aspects of Minecraft. 
+                            Multiple examples of the same subject prevent overfitting to specific scenes.
+                        </p>
+                    </div>
+                    
+                    <div class="learning-card">
+                        <div class="learning-icon">
+                            <i class="fas fa-tag"></i>
+                        </div>
+                        <h3>Precise Labeling</h3>
+                        <p>
+                            Well-crafted labels are essential since Minecraft aesthetics differ significantly from reality. 
+                            Avoiding "Minecraft" in labels allows style activation through LoRA weights alone.
+                        </p>
+                    </div>
+                    
+                    <div class="learning-card">
+                        <div class="learning-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Base Model Quality</h3>
+                        <p>
+                            A robust foundation model with diverse generation capabilities is essential for producing 
+                            varied and high-quality Minecraft-style outputs.
+                        </p>
+                    </div>
+                    
+                    <div class="learning-card">
+                        <div class="learning-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Training Duration</h3>
+                        <p>
+                            Finding the optimal training time is critical. Both under-training and over-training 
+                            can lead to poor results. Multiple checkpoints enable comparison and selection.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results & Future Work -->
+        <section class="results-section section">
+            <div class="container">
+                <h2 class="section-title">Results & Future Improvements</h2>
+                
+                <div class="results-content">
+                    <div class="results-text">
+                        <h3>Current Results</h3>
+                        <p>
+                            This LoRA (version 5) was trained on 512x512 images for 1 hour on my GPU using 156 carefully 
+                            selected Minecraft screenshots. While it successfully generates Minecraft-style images, 
+                            some limitations exist due to the relatively small dataset size.
+                        </p>
+                        
+                        <h3>Identified Limitations</h3>
+                        <ul>
+                            <li>Pattern repetition with extensive generation</li>
+                            <li>Occasional image artifacts</li>
+                            <li>Limited style variations due to small dataset (156 vs millions in large models)</li>
+                        </ul>
+                        
+                        <h3>Future Improvements</h3>
+                        <ul>
+                            <li>Expand the training dataset with more diverse Minecraft scenes</li>
+                            <li>Experiment with different training parameters and epochs</li>
+                            <li>Test shorter training durations for potentially better results</li>
+                            <li>Implement advanced data augmentation techniques</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Thomas Marchand. All rights reserved.</p>
+                    <p>This project showcases custom AI model training and computer vision techniques.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Back to Portfolio</a>
+                </div>
+            </div>
+        </div>
     </footer>
-    <style>
-        video {
-            height: 100vh;
-            width: 100%;
-            object-fit: fill;
-            position: absolute;
-        }
-    </style>
 </body>
 </html>

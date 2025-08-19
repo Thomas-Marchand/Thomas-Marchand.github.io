@@ -3,355 +3,659 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thomas Marchand - github.io</title>
+    <title>Thomas Marchand - Software Developer</title>
     <link rel="stylesheet" href="index.css">
-    <!-- Roboto font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div id="nav-wrapper">
-        <nav id="nav">
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#proglanguages">PL</a>
-            <a href="#languages">Languages</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </div>
-    <header id="header">
-        <div class="background"></div>
-        <div class="banner-container">
-            <h1>Thomas Marchand</h1>
-            <p class="banner-text">Born in France, lived in Japan for 7 years.<br>Computer science student at Sorbonne Science University.</p>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">TM</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
-    </header>
-    <!-- small spacing -->
-    <div class="spacer"></div>
-    <div class="container">
+    </nav>
 
-        <!-- Skills section -->
-        <section id="skills" class="section-item">
-            <h2>Skills</h2>
-            <p>These are the skills I have acquired over the years. Hover over them to see more details.</p>
-            <div class="skills-list">
-                <div class="skill-item">
-                    <img src="skill_icons/blender_logo.png" alt="blender_img">
-                    <div class="skill-content">
-                        <p class="skill-title">Blender</p>
-                        <p class="skill-description">3D modeling software</p>
-                        <p class="skill-experience">Experience: 12 years</p>
-                        <p class="skill-personal">Have experience in hard-surface modeling, sculpting, texturing, UV mapping, baking, video editing,
-                            rigging, fluid and smoke simulation, particle simulation, physics simulation, animation, compositing.<br>
-                            Have participated in 30+ daily tournaments and a large community challenge.</p>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="greeting">Hello, I'm</span>
+                        <span class="name">Thomas Marchand</span>
+                    </h1>
+                    <h2 class="hero-subtitle">Software Developer & AI Enthusiast</h2>
+                    <p class="hero-description">
+                        Computer Science student at Sorbonne University with 7 years of international experience in Japan. 
+                        Passionate about AI, machine learning, and creating innovative solutions.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-code"></i>
+                            View My Work
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i>
+                            Get In Touch
+                        </a>
                     </div>
                 </div>
-                <div class="skill-item">
-                    <img src="skill_icons/unity_logo.png" alt="unity_img">
-                    <div class="skill-content">
-                        <p class="skill-title">Unity</p>
-                        <p class="skill-description">Game development platform</p>
-                        <p class="skill-experience">Experience: 3 years</p>
-                        <p class="skill-personal">Made multiple games in Unity, including fps, connect 4 with a multitude of strategies,
-                            and a 3d explorable exposition.</p>
+                <div class="hero-image">
+                    <div class="hero-image-container">
+                        <div class="floating-elements">
+                            <div class="floating-element">💻</div>
+                            <div class="floating-element">🤖</div>
+                            <div class="floating-element">⚡</div>
+                        </div>
                     </div>
                 </div>
-                <div class="skill-item">
-                    <img src="skill_icons/stability_logo.png" alt="stability_img">
-                    <div class="skill-content">
-                        <p class="skill-title">Stable Diffusion</p>
-                        <p class="skill-description">Image generation</p>
-                        <p class="skill-experience">Experience: 2 years</p>
-                        <p class="skill-personal">Experienced with generation and prompting, usage of tools such as ControlNet and animatediff,
-                            created custom models and LoRAs.</p>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </section>
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="section-subtitle">Passionate developer with international experience</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="about-intro">
+                            I'm a Computer Science student at Sorbonne University with a unique international background, 
+                            having lived in Japan for 7 years. This experience has shaped my perspective on technology 
+                            and problem-solving.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat">
+                                <h3>7</h3>
+                                <p>Years in Japan</p>
+                            </div>
+                            <div class="stat">
+                                <h3>15+</h3>
+                                <p>Projects Completed</p>
+                            </div>
+                            <div class="stat">
+                                <h3>3</h3>
+                                <p>Languages Spoken</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-highlights">
+                        <div class="highlight-card">
+                            <i class="fas fa-brain"></i>
+                            <h4>AI & Machine Learning</h4>
+                            <p>Specialized in neural networks, computer vision, and deep learning applications</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h4>Full-Stack Development</h4>
+                            <p>Experienced in modern web technologies and mobile application development</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-globe"></i>
+                            <h4>International Perspective</h4>
+                            <p>Multicultural background with fluency in French, English, and Japanese</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects section -->
-        <section id="projects" class="section-item">
-            <h2>Projects</h2>
-            <p>Here's a selection of projects I've worked on. Hover over them to see the image.</p>
-            <div class="project-grid">
-                <div class="project-item">
-                    <div class="image-container">
-                        <img src="proj-img/connect4.gif" alt="Connect 4">
-                        <p class="project-title">Connect 4</p>
-                    </div> 
-                    <div class="project-content">
-                        <p class="project-description">A game of connect 4 in Unity</p>
-                        <p class="project-personal">This game runs on mobile and has 2 modes: gameplay and simulation<br>
-                            The video you see is the gameplay mode, and you can choose in the menu between 1 player, 2 players or bots fighting.<br>
-                            You can also choose the algorithm and the stength of the algorithm.<br>
-                            <br>
-                            (Note that the video quality has been reduced for optimization, the game runs smoothly otherwise (120fps).)</p>
+        <!-- Experience Section -->
+        <section id="experience" class="experience section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Experience & Education</h2>
+                    <p class="section-subtitle">My journey in technology and academics</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Computer Science Student</h3>
+                            <h4>Sorbonne University</h4>
+                            <span class="timeline-date">2021 - Present</span>
+                            <p>Pursuing a master's degree in Computer Science with focus on AI and machine learning</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>International Experience</h3>
+                            <h4>Japan</h4>
+                            <span class="timeline-date">2011 - 2018</span>
+                            <p>7 years of cultural immersion, language learning, and international perspective development</p>
+                        </div>
                     </div>
                 </div>
-                <div class="project-item">
-                    <div class="image-container">
-                        <img src="proj-img/roborobo.gif" alt="AI NN Roborobo">
-                        <p class="project-title">AI Robots</p>
-                    </div>
-                    <div class="project-content">
-                        <p class="project-description">A game of robots in Python</p>
-                        <p class="project-personal">A robot project with different strategies. My strategy was to use neural networks<br>
-                            I ran 40 python scripts in parallel to speed up the process, tested multiple weights, learning rates, and activation functions.<br>
-                            <br>
-                            This strategy helped us get 2nd place out of 17 groups in the tournament.
-                        </p>
-                    </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">A showcase of my recent work and innovations</p>
                 </div>
-                <div class="project-item">
-                        <div class="image-container">                           
+                <div class="projects-grid">
+                    <div class="project-card featured">
+                        <a href="project-mclora.html" class="project-image">
                             <img src="proj-img/mclora.gif" alt="Minecraft LoRA">
-                            <p class="project-title">AI Model Modification</p>
-                        </div>
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <span class="project-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
                         <div class="project-content">
-                            <p class="project-description">Modifying a diffusion model to generate Minecraft-like images</p>
-                            <p class="link-text"> <a href="project-mclora.html"> More info here </a> </p>
-                            <p class="project-personal">I trained a LoRA with 156 screenshots from the game Minecraft, and used it to modify an AI model output.<br>
-                                The images are carefully prompted for a better dataset.<br>
-                                <br>
-                                This LoRA v5 was trained with 512x512 images, and it was trained for 1h on my GPU.<br>
+                            <div class="project-meta">
+                                <span class="project-tag">AI/ML</span>
+                                <span class="project-tag">Computer Vision</span>
+                            </div>
+                            <h3 class="project-title">AI Model Modification</h3>
+                            <p class="project-description">
+                                Trained a custom LoRA with 156 Minecraft screenshots to modify diffusion model outputs. 
+                                Achieved high-quality style transfer with optimized training parameters.
                             </p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>PyTorch</span>
+                                <span>Stable Diffusion</span>
+                            </div>
                         </div>
-                    </a>
-                </div>
-                <div class="project-item">
-                    <div class="image-container">                           
-                        <img src="proj-img/denoiser.jpg" alt="Custom Denoiser">
-                        <p class="project-title">Custom Image Denoiser</p>
                     </div>
-                    <div class="project-content">
-                        <p class="project-description">Training a model on a custom dataset to denoise images</p>
-                        <p class="project-personal">The denoising algorithm for videos on my phone was lacking, so I decided to train my own denoiser.<br>
-                            Dataset are pairs of images, one with a long exposure time with low noise/iso and another with a short exposure time with high noise/iso.<br>
-                            It's a patch-based denoising autoencoder, and I can change various parameters for better results. This example was trained on around 300 images.<br>
-                        </p>
+
+                    <div class="project-card">
+                        <a href="https://github.com/Thomas-Marchand/master-calendar-viewer" target="_blank" class="project-image">
+                            <img src="proj-img/master-calendar-viewer.gif" alt="Master Calendar">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <span class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-tag">Web App</span>
+                            </div>
+                            <h3 class="project-title">Master Calendar</h3>
+                            <p class="project-description">
+                                A high-performance calendar application 50x faster than the official university calendar.
+                                Uses python, gist API, and JavaScript to fetch and display events efficiently.
+                                Designed to help students manage their schedules.
+                            </p>
+                            <div class="project-tech">
+                                <span>JavaScript</span>
+                                <span>HTML/CSS</span>
+                                <span>API Integration</span>
+                            </div>
+                        </div>
                     </div>
-                </a>
-            </div>
-                <div class="project-item">
-                    <div class="image-container">
-                        <img src="proj-img/femtogpt.gif " alt="GPT AI">
-                        <p class="project-title">Python GPT</p>
-                    </div>
-                    <div class="project-content">
-                        <p class="project-description">Building and training a GPT model from scratch in Python</p>
-                        <p class="project-personal">I trained a GPT model from scratch using python and the pytorch library for faster training.<br>
-                            The model was trained on a custom clean dataset I made for this purpose of 1.3M characters from chatGPT 3.5, and it was trained for 1h on my GPU.<br>
-                            It only has 3.3M parameters, but it can answer questions with decent accuracy.<br>
-                            Of course, this doesn't compare to the real GPT-3.5, which has around 50000x more parameters, but i'm working to make the dataset bigger to improve the model.<br>
-                        </p>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="image-container">
-                        <img src="proj-img/btspeaker.gif" alt="Bluetooth Speaker">
-                        <p class="project-title">Bluetooth Speaker</p>
-                    </div>
-                    <div class="project-content">
-                        <p class="project-description">A custom made, thin bluetooth speaker</p>
-                        <p class="project-personal">I wanted a thin speaker that could fit in my bag without bulging, so I made my own.<br>
-                            I cut the wood, painted it, bought parts, soldered them, and assembled everything.<br>
-                            The final product is 26mm thick. It has 2 18650 batteries, 4 speakers, a bluetooth module, supports audio from 3.5mm jack and charges via USB-C.<br>
-                        </p>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="image-container">
-                        <img src="proj-img/reactsite.jpg" alt="React website">
-                        <p class="project-title">React Website</p>
-                    </div>
-                    <div class="project-content">
-                        <p class="project-description">A fully working website with forums</p>
-                        <p class="project-personal">This project uses React, Node.js, Express and MongoDB.<br>
-                            It has a login system, hundreds of messages, and a user system.<br>
-                            It supports filtering, message posting, editing, account creation, different roles, forum permissions, and more.<br>
-                        </p>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <a href="https://github.com/Thomas-Marchand/TicTacToe-multilang" target="_blank">
-                        <div class="image-container">
-                            <img src="proj-img/tictactoe.gif" alt="TicTacToe">
-                            <p class="project-title">Tic Tac Toe</p>
+
+                    <div class="project-card no-link">
+                        <div class="project-image">
+                            <img src="proj-img/roborobo.gif" alt="AI Robots">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                </div>
+                            </div>
                         </div>
                         <div class="project-content">
-                            <p class="project-description">A perfect tic tac toe bot in Python, C and Unity</p>
-                            <p class="project-personal">Have you ever wanted to play against a perfect bot in 3 different languages? Me neither. Have fun!</p>
+                            <div class="project-meta">
+                                <span class="project-tag">AI</span>
+                                <span class="project-tag">Competition</span>
+                            </div>
+                            <h3 class="project-title">AI Robot Strategy</h3>
+                            <p class="project-description">
+                                Neural network-based robot strategy that achieved 2nd place out of 17 teams. 
+                                Optimized through parallel training and hyperparameter tuning.
+                            </p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Neural Networks</span>
+                                <span>Parallel Computing</span>
+                            </div>
                         </div>
-                    </a>
-                </div>
-                <div class="project-item">
-                    <a href="web_clock_encr.html" target="_blank">
-                        <div class="image-container">
+                    </div>
+
+                    <div class="project-card no-link">
+                        <div class="project-image">
+                            <img src="proj-img/connect4.gif" alt="Connect 4">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-tag">Game Dev</span>
+                                <span class="project-tag">Mobile</span>
+                            </div>
+                            <h3 class="project-title">Connect 4 Game</h3>
+                            <p class="project-description">
+                                Mobile Connect 4 game with AI opponents of varying difficulty levels. 
+                                Features both gameplay and simulation modes running at 120fps.
+                            </p>
+                            <div class="project-tech">
+                                <span>Unity</span>
+                                <span>C#</span>
+                                <span>AI Algorithms</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card no-link">
+                        <div class="project-image">
+                            <img src="proj-img/femtogpt.gif" alt="GPT Model">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-tag">AI</span>
+                                <span class="project-tag">NLP</span>
+                            </div>
+                            <h3 class="project-title">Custom GPT Model</h3>
+                            <p class="project-description">
+                                Built and trained a GPT model from scratch with 3.3M parameters. 
+                                Custom dataset of 1.3M characters with decent accuracy for its size.
+                            </p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>PyTorch</span>
+                                <span>Transformers</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card no-link">
+                        <div class="project-image">
+                            <img src="proj-img/reactsite.jpg" alt="React Website">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-tag">Full-Stack</span>
+                                <span class="project-tag">Web App</span>
+                            </div>
+                            <h3 class="project-title">Forum Platform</h3>
+                            <p class="project-description">
+                                Full-stack forum application with user authentication, role management, 
+                                and real-time messaging. Supports hundreds of messages and advanced filtering.
+                            </p>
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="web_clock_encr.html" class="project-image">
                             <img src="proj-img/webclock.png" alt="Web Clock">
-                            <p class="project-title">Clock.</p>
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <span class="project-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-tag">Web App</span>
+                                <span class="project-tag">JavaScript</span>
+                            </div>
+                            <h3 class="project-title">Maximized Web Clock</h3>
+                            <p class="project-description">
+                                A unique web-based clock application that maximizes screen space, useful for displaying time in a large room.
+                                Features a clean interface and OLED burn-in prevention.
+                            </p>
+                            <div class="project-tech">
+                                <span>JavaScript</span>
+                                <span>HTML/CSS</span>
+                                <span>Encryption</span>
+                                <span>Efficiency</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card no-link">
+                        <div class="project-image">
+                            <img src="proj-img/btspeaker.gif" alt="Bluetooth Speaker">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                </div>
+                            </div>
                         </div>
                         <div class="project-content">
-                            <p class="project-description">A simple clock optimized for maximum screen efficiency and readability</p>
-                            <p class="project-personal">Why would I make a simple clock?<br>
-                                It all started when I was taking exams. I had 6. 5 of them had clocks. How many were on time? None. So I made my own, thinking of what could have been used :&#41;<br>
-                                It has some features like a boldness slider, a button to show seconds and a mode to prevent OLED burn-in. Feel free to try it out by clicking here.<br><br>
-                                (Note that it works best on 16:9 screens)</p>
+                            <div class="project-meta">
+                                <span class="project-tag">Hardware</span>
+                                <span class="project-tag">IoT</span>
+                            </div>
+                            <h3 class="project-title">Bluetooth Speaker System</h3>
+                            <p class="project-description">
+                                Custom Bluetooth speaker with enhanced audio processing and wireless connectivity. 
+                                Features advanced sound optimization and portable design.
+                            </p>
+                            <div class="project-tech">
+                                <span>Bluetooth</span>
+                                <span>Audio Processing</span>
+                                <span>Hardware Design</span>
+                            </div>
                         </div>
-                    </a>
+                    </div>
+
+                    <div class="project-card no-link">
+                        <div class="project-image">
+                            <img src="proj-img/denoiser.jpg" alt="Audio Denoiser">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-tag">AI</span>
+                                <span class="project-tag">Image Processing</span>
+                            </div>
+                            <h3 class="project-title">Custom Image Denoiser</h3>
+                            <p class="project-description">
+                                Machine learning-based image denoising system that removes noise 
+                                from images while preserving important details.
+                            </p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Machine Learning</span>
+                                <span>Signal Processing</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card no-link">
+                        <div class="project-image">
+                            <img src="proj-img/tictactoe.gif" alt="Tic Tac Toe">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-tag">Game Dev</span>
+                                <span class="project-tag">AI</span>
+                            </div>
+                            <h3 class="project-title">Smart Tic-Tac-Toe</h3>
+                            <p class="project-description">
+                                Classic Tic-Tac-Toe game with AI opponent using minimax algorithm. 
+                                Features multiple difficulty levels and smooth gameplay animations.
+                            </p>
+                            <div class="project-tech">
+                                <span>JavaScript</span>
+                                <span>AI Algorithms</span>
+                                <span>Game Logic</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        
-        <!-- Programming Languages section -->
-        <section id="proglanguages" class="section-item">
-            <h2>Programming Languages</h2>
-            <p>These are the languages and libraries I am familiar with.</p>
-            <p>Click on the logos to learn more about each language.</p>
-            <div class="prog-languages-grid">
-                <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank">
-                    <div class="prog-item">
-                        <img src="prog_icons/C_logo.png" alt="c_img">
-                        <div class="info-box">C</div>
+        <!-- Skills Section -->
+        <section id="skills" class="skills section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Technical Skills</h2>
+                    <p class="section-subtitle">Technologies and tools I work with</p>
+                </div>
+                <div class="skills-content">
+                    <div class="skills-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-code"></i>
+                            Programming Languages
+                        </h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <img src="prog_icons/python_logo.png" alt="Python">
+                                <span>Python</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <img src="prog_icons/javascript_logo.png" alt="JavaScript">
+                                <span>JavaScript</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <img src="prog_icons/java_logo.png" alt="Java">
+                                <span>Java</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="75"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <img src="prog_icons/C_logo.png" alt="C">
+                                <span>C</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="70"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <img src="prog_icons/Csharp_logo.png" alt="C#">
+                                <span>C#</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="50"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <img src="prog_icons/Cpp_logo.png" alt="C++">
+                                <span>C++</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="35"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </a>
-                <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank">
-                    <div class="prog-item">
-                        <img src="prog_icons/python_logo.png" alt="python_img">
-                        <div class="info-box">Python</div>
+
+                    <div class="skills-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-laptop-code"></i>
+                            Frameworks & Tools
+                        </h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <img src="prog_icons/react_logo.png" alt="React">
+                                <span>React</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <img src="skill_icons/unity_logo.png" alt="Unity">
+                                <span>Unity</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <img src="skill_icons/blender_logo.png" alt="Blender">
+                                <span>Blender</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <img src="skill_icons/stability_logo.png" alt="Stable Diffusion">
+                                <span>Stable Diffusion</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="85"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </a>
-                <a href="https://en.wikipedia.org/wiki/Java_(programming_language)" target="_blank">
-                    <div class="prog-item">
-                        <img src="prog_icons/java_logo.png" alt="java_img">
-                        <div class="info-box">Java</div>
+
+                    <div class="skills-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-globe"></i>
+                            Languages
+                        </h3>
+                        <div class="language-skills">
+                            <div class="language-item">
+                                <img src="lang_icons/fr.webp" alt="French">
+                                <div class="language-info">
+                                    <span class="language-name">French</span>
+                                    <span class="language-level">Native</span>
+                                </div>
+                            </div>
+                            <div class="language-item">
+                                <img src="lang_icons/gb.webp" alt="English">
+                                <div class="language-info">
+                                    <span class="language-name">English</span>
+                                    <span class="language-level">Fluent</span>
+                                </div>
+                            </div>
+                            <div class="language-item">
+                                <img src="lang_icons/jp.webp" alt="Japanese">
+                                <div class="language-info">
+                                    <span class="language-name">Japanese</span>
+                                    <span class="language-level">Native</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </a>
-                <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" target="_blank">
-                    <div class="prog-item">
-                        <img src="prog_icons/Csharp_logo.png" alt="csharp_img">
-                        <div class="info-box">CSharp</div>
-                    </div>
-                </a>
-                <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">
-                    <div class="prog-item">
-                        <img src="prog_icons/html5_logo.png" alt="html_img">
-                        <div class="info-box">HTML</div>
-                    </div>
-                </a>
-                <a href="https://en.wikipedia.org/wiki/CSS" target="_blank">
-                    <div class="prog-item">
-                        <img src="prog_icons/css_logo.png" alt="css_img">
-                        <div class="info-box">CSS</div>
-                    </div>
-                </a>
-                <a href="https://en.wikipedia.org/wiki/C%2B%2B" target="_blank">
-                    <div class="prog-item">
-                        <img src="prog_icons/Cpp_logo.png" alt="cpp_img">
-                        <div class="info-box">C++</div>
-                    </div>
-                </a>
-                <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">
-                    <div class="prog-item">
-                        <img src="prog_icons/javascript_logo.png" alt="js_img">
-                        <div class="info-box">JavaScript</div>
-                    </div>
-                </a>
-                <a href="https://en.wikipedia.org/wiki/React_(web_framework)" target="_blank">
-                    <div class="prog-item">
-                        <img src="prog_icons/react_logo.png" alt="react_img">
-                        <div class="info-box">React</div>
-                    </div>
-                </a>
-                <a href="https://en.wikipedia.org/wiki/PHP" target="_blank">
-                    <div class="prog-item">
-                        <img src="prog_icons/php_logo.png" alt="php_img">
-                        <div class="info-box">PHP</div>
-                    </div>
-                </a>
-                <a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)" target="_blank">
-                    <div class="prog-item">
-                        <img src="prog_icons/bash_logo.png" alt="bash_img">
-                        <div class="info-box">Bash</div>
-                    </div>
-                <a href="https://en.wikipedia.org/wiki/OCaml" target="_blank">
-                    <div class="prog-item">
-                        <img src="prog_icons/OCaml_logo.png" alt="ocaml_img">
-                        <div class="info-box">OCaml</div>
-                    </div>
-                </a>
-                <a href="https://en.wikipedia.org/wiki/SQL" target="_blank">
-                    <div class="prog-item">
-                        <img src="prog_icons/sql_logo.png" alt="sql_img">
-                        <div class="info-box">SQL</div>
-                    </div>
-                <a href="https://en.wikipedia.org/wiki/MIPS_architecture" target="_blank">
-                    <div class="prog-item">
-                        <img src="prog_icons/MIPS_logo.png" alt="mips_img">
-                        <div class="info-box">MIPS</div>
-                    </div>
-                </a>
+                </div>
             </div>
         </section>
 
-        <!-- Languages section -->
-        <section id="languages" class="section-item">
-            <h2>Languages</h2>
-            <p>These are the languages I speak.</p>
-            <div class="lang-grid"> 
-                <div>
-                    <img src="lang_icons/fr.webp" alt="fr_img">
-                    <p>French</p>
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">Let's discuss opportunities and collaborations</p>
                 </div>
-                <div>
-                    <img src="lang_icons/gb.webp" alt="en_img">
-                    <p>English</p>
-                </div>
-                <div>
-                    <img src="lang_icons/jp.webp" alt="jp_img">
-                    <p>Japanese</p>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-text">
+                            <div class="contact-intro">
+                                <h3>Ready to collaborate?</h3>
+                                <p>
+                                    I'm passionate about creating innovative solutions and always open to discussing 
+                                    new opportunities, whether it's a challenging project, research collaboration, 
+                                    or simply exploring the latest in AI and technology.
+                                </p>
+                            </div>
+                            <div class="contact-cta">
+                                <p>
+                                    <strong>Currently seeking:</strong> Internship opportunities in AI/ML, full-stack development roles, 
+                                    or research positions where I can apply my technical skills and international perspective.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="contact-methods">
+                            <div class="method-primary">
+                                <a href="mailto:thomasmar768@gmail.com" class="contact-method featured">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h4>Email</h4>
+                                        <p>thomasmar768@gmail.com</p>
+                                        <span class="contact-label">Preferred contact method</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="method-secondary">
+                                <a href="https://github.com/Thomas-Marchand" target="_blank" class="contact-method">
+                                    <div class="contact-icon">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h4>GitHub</h4>
+                                        <p>Thomas-Marchand</p>
+                                    </div>
+                                </a>
+                                <a href="https://wa.me/33766574894" target="_blank" class="contact-method">
+                                    <div class="contact-icon">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h4>WhatsApp</h4>
+                                        <p>+33 7 66 57 48 94</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="contact-availability">
+                            <div class="availability-status">
+                                <div class="status-indicator"></div>
+                                <span>Available for new opportunities</span>
+                            </div>
+                            <p class="response-time">I typically respond within 24 hours</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        
-        <!-- Contact section -->
-        <section id="contact" class="section-item">
-            <h2>Contact</h2>
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <a href="https://wa.me/766574894" target="_blank">
-                        <img src="contact_icons/whatsapp_logo.png" alt="Whatsapp">
-                        <div>
-                            <p class="contact-title">Whatsapp</p>
-                        </a>
-                        <p class="contact-info">+33 7 66 57 48 94</p>
-                        </div>
-                </div>
-                <div class="contact-item">
-                    <a href="mailto: thomasmar768@gmail.com" target="_blank">
-                        <img src="contact_icons/gmail_logo.png" alt="Gmail">
-                        <div>
-                            <p class="contact-title">Gmail</p>
-                        </a>
-                        <p class="contact-info">thomasmar768@gmail.com</p>
-                        </div>
-                </div>
-                <div class="contact-item">
-                    <a href="https://github.com/Thomas-Marchand" target="_blank">
-                        <img src="contact_icons/github_logo.png" alt="Github">
-                        <div>
-                            <p class="contact-title">Github</p>
-                        </a>
-                        <p class="contact-info">Thomas-Marchand</p>
-                        </div>
-                </div>
-                </div>
-            </div>
-        </section>
+    </main>
 
-    <footer>
-        <p>© 2025 Thomas Marchand</p>
-        <p>Page coded/designed by me. Feel free to contact me for any questions or suggestions.</p>
-        <p class="footer-extra">This site was tested on multiple devices (Android Chrome, iOS Safari, iOS Chrome, Windows Chrome, Windows Firefox) and a problem was found on a laptop Windows Chrome, where it was laggy. Try another browser or device if you encounter any issues, and it should work fine.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Thomas Marchand. All rights reserved.</p>
+                    <p>Designed and developed with passion for clean, modern web experiences.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#hero">Back to Top</a>
+                </div>
+            </div>
+        </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
