@@ -155,7 +155,7 @@ class Portfolio {
 
         // Floating animation for skill items
         document.querySelectorAll('.skill-item').forEach((item, index) => {
-            item.style.animationDelay = `${index * 0.1}s`;
+            item.style.animationDelay = `${index * 0.05}s`;
             item.addEventListener('mouseenter', () => {
                 item.style.transform = 'translateY(-5px) scale(1.02)';
             });
