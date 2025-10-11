@@ -244,11 +244,12 @@ a { /* Link styles */
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
-.project-item { /* Programming item styles */
+.project-item {
     display: flex;
-    justify-content: center; /* center items horizontally */
-    align-items: flex-start; /* align items to the top */
-    position: relative; /* position the info-box relative to this element */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    position: relative;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #242424;
@@ -257,19 +258,24 @@ a { /* Link styles */
 .project-item:hover {
     border: 1px solid #333;
 }
-.project-item img {
+.project-item img,
+.project-item video {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     -webkit-filter: blur(5px);
     filter: blur(5px);
     opacity: 0.5;
     transition: all 0.4s ease;
+    border-radius: 9px; 
 }
-/* unblur when item hovered */
-.project-item:hover img {
+.project-item:hover img,
+.project-item:hover video {
     -webkit-filter: blur(0);
     filter: blur(0);
     opacity: 1;
 }
+
 .project-content .project-title {
     font-size: 2em;
     font-weight: bold;
@@ -283,6 +289,8 @@ a { /* Link styles */
 }
 .image-container {
     position: relative;
+    overflow: hidden;
+    border-radius: 9px;
 }
 .image-container .project-title {
     text-align: center;
@@ -298,7 +306,7 @@ a { /* Link styles */
     pointer-events: none;
 }
 .project-item:hover .project-title {
-    opacity: 0; 
+    opacity: 0;
 }
 .project-description {
     font-size: 1.2em;
@@ -307,8 +315,6 @@ a { /* Link styles */
 .project-personal {
     font-size: 0.8em;
 }
-
-
 
 
 
