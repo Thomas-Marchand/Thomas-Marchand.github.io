@@ -258,6 +258,18 @@ a { /* Link styles */
 .project-item:hover {
     border: 1px solid #333;
 }
+
+/* Blue hover effect for linked projects */
+.project-item a:hover {
+    background-color: rgba(100, 150, 255, 0.1);
+    border-radius: 9px;
+    display: block;
+}
+
+.project-item:has(a):hover {
+    background-color: rgba(100, 150, 255, 0.05);
+    border: 1px solid rgba(100, 150, 255, 0.3);
+}
 .project-item img,
 .project-item video {
     width: 100%;
