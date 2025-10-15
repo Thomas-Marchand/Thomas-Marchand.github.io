@@ -259,11 +259,22 @@ a { /* Link styles */
     border: 1px solid #333;
 }
 
+.project-item:has(a) .project-description::after {
+    content: "  🔗";
+}
+
 /* Blue hover effect for linked projects */
+.project-item a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
 .project-item a:hover {
     background-color: rgba(100, 150, 255, 0.1);
     border-radius: 9px;
-    display: block;
 }
 
 .project-item:has(a):hover {
