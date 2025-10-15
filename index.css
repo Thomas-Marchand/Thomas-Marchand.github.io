@@ -174,6 +174,19 @@ a { /* Link styles */
 
 
 /* SKILLS */
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 10px;
+    align-items: stretch;
+}
+
+@media screen and (max-width: 600px) {
+    .skills-list {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
 #skills img {
     width: 128px;
     /* align to the top*/
@@ -187,12 +200,15 @@ a { /* Link styles */
 }
 .skill-item {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
     border: 1px solid #242424;
     border-radius: 10px;
     padding: 10px;
-    padding-bottom: 0px;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    min-height: 140px;
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
@@ -202,11 +218,26 @@ a { /* Link styles */
     border: 1px solid #333;
     cursor: pointer;
 }
-.skill-item p {
-    margin-left: 10px;
-}
 .skill-item img {
-    margin-right: 10px;
+    width: 128px;
+    align-self: flex-start;
+    margin-right: 15px;
+    margin-top: 20px;
+}
+@media (max-width: 600px) {
+    .skill-item img {
+        width: 64px;
+    }
+}
+.skill-content {
+    text-align: left;
+    flex: 1;
+}
+.skill-title {
+    text-align: left;
+}
+.skill-item p {
+    margin: 5px 0;
 }
 .skill-title {
     font-size: 1.5em;
@@ -225,6 +256,7 @@ a { /* Link styles */
     max-height: 0;
     overflow: hidden; /* Hide overflow */
     transition: all 0.5s ease;
+    margin-top: 5px;
 }
 .skill-personal.show {
     opacity: 1; /* Show */
@@ -259,8 +291,26 @@ a { /* Link styles */
     border: 1px solid #333;
 }
 
-.project-item:has(a) .project-description::after {
-    content: "  🔗";
+/* Link icon overlay for linked projects */
+.project-item:has(a)::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 48px;
+    height: 48px;
+    background-image: url('img/link-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: brightness(5) contrast(1.2); /* TODO: modify the image itself */
+    opacity: 0.5;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.project-item:has(a):hover::after {
+    opacity: 1;
 }
 
 /* Blue hover effect for linked projects */
