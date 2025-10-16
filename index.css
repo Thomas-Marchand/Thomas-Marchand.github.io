@@ -164,8 +164,9 @@ a { /* Link styles */
     border: 1px solid #333;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 10;
     white-space: nowrap;
+    pointer-events: none;
 }
 
 
@@ -400,6 +401,7 @@ a { /* Link styles */
 }
 #proglanguages img { /* Image styles */
     max-width: 64px;
+        transition: transform 0.3s cubic-bezier(0.5, 3, 0.3, 0.5)
 }
 .prog-item { /* Programming item styles */
     display: flex;
@@ -407,12 +409,19 @@ a { /* Link styles */
     align-items: center; /* center items vertically */
     position: relative; /* position the info-box relative to this element */
     padding: 10px;
+    transition: transform 0.3s cubic-bezier(0.3, 3, 0.3, 0.5)
 }
 .prog-item:hover { /* Hover styles */
     cursor: pointer;
+    transform: scale(1.2);
+    z-index: 5;
+}
+.prog-item:hover img {
+    transform: scale(1.1);
 }
 .prog-item:hover .info-box { /* Show info-box when hovering the item */
     display: block;
+    z-index: 15;
 }
 .prog-item p { /* Text styles */
     margin-left: 10px;
