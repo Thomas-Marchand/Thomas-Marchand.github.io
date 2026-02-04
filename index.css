@@ -46,8 +46,7 @@ nav { /* Navigation styles */
     -webkit-backdrop-filter: blur(10px); /* Add blur effect for Safari */
     backdrop-filter: blur(10px);
     color: rgba(255, 255, 255, 0.7);
-    /* variable padding */
-    padding: 10px;
+    padding: 10px 10px;
     font-size:calc(10px + 0.5vw);
     text-align: center;
     position: fixed; /* This is to ensure the nav bar stays at the top of the page */
@@ -57,21 +56,23 @@ nav { /* Navigation styles */
 }
 nav a { /* Navigation link styles */
     position: relative;
-    margin: 0 10px;
+    display: inline-block;
+    margin: -10px 0; /* negative -> extends clickable area */
+    padding: 10px;
     white-space: nowrap;
 }
 nav a::before { /* Navigation link underline */
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 10px;
+    left: 10px;
     height: 1px;
     background-color: rgba(255, 255, 255, 0.7);
     width: 0;
     transition: width 0.3s ease-in-out;
 }
 nav a:hover::before { /* Navigation link hover styles */
-    width: 100%;
+    width: calc(100% - 20px);
 }
 
 /* HEADER */
