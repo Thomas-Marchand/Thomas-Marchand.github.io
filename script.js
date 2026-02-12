@@ -28,3 +28,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Toggle between 2 and 3 column layout
+document.addEventListener('DOMContentLoaded', function() {
+    const columnToggle = document.getElementById('column-toggle');
+    const projectGrid = document.querySelector('.project-grid');
+
+    columnToggle.addEventListener('change', function() {
+        if (this.checked) {
+            projectGrid.classList.remove('columns-2');
+            projectGrid.classList.add('columns-3');
+        } else {
+            projectGrid.classList.remove('columns-3');
+            projectGrid.classList.add('columns-2');
+        }
+    });
+});
